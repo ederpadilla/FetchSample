@@ -15,7 +15,7 @@ extension URLSession {
             return
         }
         
-        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+        let task = dataTask(with: url) { (data, response, error) in
             if let error = error {
                 completion(.failure(error))
             } else if let data = data {

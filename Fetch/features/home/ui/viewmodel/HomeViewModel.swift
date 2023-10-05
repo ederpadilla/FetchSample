@@ -20,9 +20,14 @@ class HomeViewModel: ObservableObject {
         homeUi.isLoading = true
         Task {
             do {
-                handleGetMealsSuccess(try await getMealsUseCase.getDessertMeals())
+                let meals = try await self.getMealsUseCase.getDessertMeals()
+                await MainActor.run {
+                    handleGetMealsSuccess(meals)
+                }
             } catch {
-                handleGetMealsError(error)
+                await MainActor.run {
+                    handleGetMealsError(error)
+                }
             }
         }
     }

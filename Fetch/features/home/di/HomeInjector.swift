@@ -21,7 +21,11 @@ enum HomeInjector {
         GetMealsUseCase(mealsRepository: provideMealsRepository())
     }
     
-    static func provideHomeViewModel() -> HomeViewModel {
+    private static func provideHomeViewModel() -> HomeViewModel {
         HomeViewModel(getMealsUseCase: provideGetMealsUseCase())
+    }
+    
+    static func provideHomeView() -> HomeView {
+        HomeView(viewModel: provideHomeViewModel())
     }
 }

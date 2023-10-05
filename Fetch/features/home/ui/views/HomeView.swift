@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct HomeView: View {
+    
+    @StateObject var viewModel: HomeViewModel
+    
     var body: some View {
         ZStack {
             VStack {
@@ -16,18 +19,19 @@ struct HomeView: View {
                     .foregroundStyle(.tint)
                 Text("Hello, world!")
             }.padding()
+            
+            if viewModel.homeUi.isLoading {
+                ProgressView()
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .background(Color(UIColor.systemBackground))
+            }
         }
-        .onAppear {
-            test()
+        .task {
+            viewModel.getMealsFromDesert()
         }
-        
-    }
-    
-    func test() {
-        
     }
 }
 
 #Preview {
-    HomeView()
+    HomeInjector.provideHomeView()
 }

@@ -7,8 +7,19 @@
 
 import Foundation
 
-extension Optional where Wrapped == String {
+extension String {
+    
+    func trim() -> String {
+        trimmingCharacters(in: NSCharacterSet.whitespaces)
+    }
+    
+    func isNotEmpty() -> Bool {
+        !trim().isEmpty
+    }
+}
 
+extension Optional where Wrapped == String {
+    
     func orDefaultString() -> String {
         return self ?? ""
     }

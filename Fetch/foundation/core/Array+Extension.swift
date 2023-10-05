@@ -9,7 +9,7 @@ import Foundation
 
 extension Array where Element: Any {
     
-    func hasItems() -> Bool {
+    func isNotEmpty() -> Bool {
         !isEmpty
     }
 }

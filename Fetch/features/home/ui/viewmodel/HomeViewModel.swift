@@ -15,5 +15,38 @@ class HomeViewModel: ObservableObject {
     init(getMealsUseCase: GetMealsUseCase) {
         self.getMealsUseCase = getMealsUseCase
     }
+    
+    func getMealsFromDesert() {
+        homeUi.isLoading = true
+        Task {
+            do {
+                handleGetMealsSuccess(try await getMealsUseCase.getDessertMeals())
+            } catch {
+                handleGetMealsError(error)
+            }
+        }
+    }
+    
+    private func handleGetMealsSuccess(_ meals: [MealItem]) {
+        homeUi.meals = meals.asMealsUi()
+        homeUi.showEmptyMealsMessage = homeUi.meals.isNotEmpty()
+        homeUi.isLoading = false
+    }
+    
+    private func handleGetMealsError(_ error: Error) { // TODO: handle error ui
+        homeUi.isLoading = false
+        switch error {
+        case NetworkError.noInternetConnection:
+            return
+        case NetworkError.invalidURL:
+            return
+        case NetworkError.invalidResponse:
+            return
+        case NetworkError.invalidStatusCode:
+            return
+        default:
+            return
+        }
+    }
 }
 

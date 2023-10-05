@@ -11,10 +11,12 @@ struct HomeUi {
     var isLoading: Bool = false
     var meals: [MealUi] = []
     var isShowingDetail: Bool = false
+    var showEmptyMealsMessage: Bool = false
 }
 
 struct MealUi: Identifiable {
-    let id: Int
+    let id: String
     let name: String
     let image: String
+    let shouldDisplayImage: Bool
 }

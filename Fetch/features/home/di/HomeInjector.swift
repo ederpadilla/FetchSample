@@ -17,7 +17,11 @@ enum HomeInjector {
         MealsRepository(mealsRemote: provideMealsRemoteDataSource())
     }
     
-    static func provideGetMealsUseCase() -> GetMealsUseCase {
+    private static func provideGetMealsUseCase() -> GetMealsUseCase {
         GetMealsUseCase(mealsRepository: provideMealsRepository())
+    }
+    
+    static func provideHomeViewModel() -> HomeViewModel {
+        HomeViewModel(getMealsUseCase: provideGetMealsUseCase())
     }
 }

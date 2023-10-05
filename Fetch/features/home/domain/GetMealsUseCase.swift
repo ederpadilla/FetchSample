@@ -15,7 +15,7 @@ class GetMealsUseCase {
         self.mealsRepository = mealsRepository
     }
     
-    func getDessertMeals(completion: @escaping (Result<[MealItem], Error>) -> Void) {
-        mealsRepository.getDessertMeals(completion: completion)
+    func getDessertMeals() async throws -> [MealItem] {
+        try await mealsRepository.getDessertMeals()
     }
 }

@@ -9,27 +9,20 @@ import Foundation
 
 extension URLSession {
     
-    func fetch<T: Decodable>(endopoint: String, completion: @escaping (Result<T, Error>) -> Void) { // TODO: Add better error handling for no internet, status code != 200
+    func fetch<T: Decodable>(endopoint: String) async throws -> T { // TODO: Add better error handling for no internet, status code != 200
         guard let url = URL(string: BuildConfig.environment.description + endopoint) else {
-            completion(.failure(NetworkError.invalidURL))
-            return
+            throw NetworkError.invalidURL
         }
         
-        let task = dataTask(with: url) { (data, response, error) in
-            if let error = error {
-                completion(.failure(error))
-            } else if let data = data {
-                do {
-                    let decoder = JSONDecoder()
-                    let decodedData = try decoder.decode(T.self, from: data)
-                    completion(.success(decodedData))
-                } catch {
-                    completion(.failure(NetworkError.invalidData))
-                }
-            }
-        }
+        let (data, _) = try await URLSession.shared.data(from: url)
         
-        task.resume()
+        do {
+            let decoder = JSONDecoder()
+            let responseDecoded = try decoder.decode(T.self, from: data)
+            return responseDecoded
+        } catch {
+            throw NetworkError.invalidData
+        }
     }
 }
 

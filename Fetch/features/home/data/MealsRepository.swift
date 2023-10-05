@@ -15,7 +15,7 @@ class MealsRepository {
         self.mealsRemote = mealsRemote
     }
     
-    func getDessertMeals(completion: @escaping (Result<[MealItem], Error>) -> Void) {
-        mealsRemote.fetchMeals(completion: completion)
+    func getDessertMeals() async throws -> [MealItem] {
+        try await mealsRemote.fetchDessertMeals()
     }
 }

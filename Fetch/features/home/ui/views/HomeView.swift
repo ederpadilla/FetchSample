@@ -23,14 +23,21 @@ struct HomeView: View {
     
     func test() {
         let getMealsUseCase = HomeInjector.provideGetMealsUseCase()
-        getMealsUseCase.getDessertMeals { result in
-            switch result {
-            case .success(let data):
-                print("Mensaje: \(data)")
-            case .failure(let error):
-                print("Error: \(error)")
+        Task {
+            do {
+                handleFetchFoodysSuccess(try await getMealsUseCase.getDessertMeals())
+            } catch {
+                handleFetchFoodysError(error)
             }
         }
+    }
+    
+    func handleFetchFoodysSuccess(_ meals: [MealItem]) {
+        print("Mensaje: \(meals)")
+    }
+    
+    private func handleFetchFoodysError(_ error: Error?) {
+        print("Error: \(error)")
     }
 }
 

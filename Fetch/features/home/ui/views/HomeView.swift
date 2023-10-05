@@ -15,7 +15,22 @@ struct HomeView: View {
                 .foregroundStyle(.tint)
             Text("Hello, world!")
         }
+        .onAppear {
+            test()
+        }
         .padding()
+    }
+    
+    func test() {
+        let getMealsUseCase = HomeInjector.provideGetMealsUseCase()
+        getMealsUseCase.getDessertMeals { result in
+            switch result {
+            case .success(let data):
+                print("Mensaje: \(data)")
+            case .failure(let error):
+                print("Error: \(error)")
+            }
+        }
     }
 }
 

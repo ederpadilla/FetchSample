@@ -9,35 +9,22 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        ZStack {
+            VStack {
+                Image(systemName: "globe")
+                    .imageScale(.large)
+                    .foregroundStyle(.tint)
+                Text("Hello, world!")
+            }.padding()
         }
         .onAppear {
             test()
         }
-        .padding()
+        
     }
     
     func test() {
-        let getMealsUseCase = HomeInjector.provideGetMealsUseCase()
-        Task {
-            do {
-                handleFetchFoodysSuccess(try await getMealsUseCase.getDessertMeals())
-            } catch {
-                handleFetchFoodysError(error)
-            }
-        }
-    }
-    
-    func handleFetchFoodysSuccess(_ meals: [MealItem]) {
-        print("Mensaje: \(meals)")
-    }
-    
-    private func handleFetchFoodysError(_ error: Error?) {
-        print("Error: \(error)")
+        
     }
 }
 

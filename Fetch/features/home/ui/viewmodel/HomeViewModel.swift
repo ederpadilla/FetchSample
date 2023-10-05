@@ -31,9 +31,11 @@ class HomeViewModel: ObservableObject {
         homeUi.meals = meals.asMealsUi()
         homeUi.showEmptyMealsMessage = homeUi.meals.isNotEmpty()
         homeUi.isLoading = false
+        print("Mensaje: \(homeUi.meals)")
     }
     
     private func handleGetMealsError(_ error: Error) { // TODO: handle error ui
+        print("Error: \(error)")
         homeUi.isLoading = false
         switch error {
         case NetworkError.noInternetConnection:

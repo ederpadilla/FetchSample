@@ -24,7 +24,7 @@ struct MealsCollectionView: View {
                     
                 }
             }.padding(.point16)
-        }
+        }.navigationTitle(String(localized: "Meals Title"))
     }
 }
 

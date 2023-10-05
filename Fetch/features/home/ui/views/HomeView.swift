@@ -14,7 +14,11 @@ struct HomeView: View {
     var body: some View {
         ZStack {
             
-            MealsCollectionView()
+            NavigationView {
+                
+                MealsCollectionView()
+                
+            }
             
             if viewModel.homeUi.isLoading {
                 ProgressView()

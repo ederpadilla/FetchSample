@@ -8,7 +8,7 @@
 import Foundation
 
 struct HomeUi {
-    var isLoading: Bool = false
+    var isLoading: Bool = true
     var meals: [MealUi] = []
     var isShowingDetail: Bool = false
     var showEmptyMealsMessage: Bool = false

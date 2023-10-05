@@ -9,7 +9,7 @@ import Foundation
 
 extension URLSession {
     
-    func fetch<T: Decodable>(endopoint: String, completion: @escaping (Result<T, Error>) -> Void) {
+    func fetch<T: Decodable>(endopoint: String, completion: @escaping (Result<T, Error>) -> Void) { // TODO: Add better error handling for no internet, status code != 200
         guard let url = URL(string: BuildConfig.environment.description + endopoint) else {
             completion(.failure(NetworkError.invalidURL))
             return

@@ -6,12 +6,18 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct CircularImageView: View {
+    
+    let imageUrl: String
+    
     var body: some View {
-        Image("your_image_name")
+        AnimatedImage(url: URL(string: imageUrl))
+            .transition(SDWebImageTransition.fade)
             .resizable()
-            .aspectRatio(contentMode: .fill)
+            .placeholder { ProgressView() }
+            .aspectRatio(contentMode: .fit)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .clipShape(Circle())
             .overlay(Circle().stroke(Color.gray, lineWidth: .point4))
@@ -20,6 +26,6 @@ struct CircularImageView: View {
 
 struct CircularImageView_Previews: PreviewProvider {
     static var previews: some View {
-        CircularImageView()
+        CircularImageView(imageUrl: .empty)
     }
 }

@@ -25,9 +25,12 @@ struct MealView: View {
                     .cornerRadius(.point8)
                     .offset(y: .point120)
                 
-                CircularImageView()
-                    .frame(maxWidth: .infinity,
-                           minHeight: .point35)
+                if mealItemUi.shouldDisplayImage {
+                    
+                    CircularImageView(imageUrl: mealItemUi.image)
+                        .frame(maxWidth: .infinity,
+                               minHeight: .point35)
+                }
             }
         }
     }

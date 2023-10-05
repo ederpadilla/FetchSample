@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		E6BF21B02ACE489D0002C179 /* BuildConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BF21AF2ACE489D0002C179 /* BuildConfig.swift */; };
 		E6BF21B32ACE48C00002C179 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BF21B22ACE48C00002C179 /* String+Extension.swift */; };
+		E6BF21B82ACE4A910002C179 /* HomeInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BF21B72ACE4A910002C179 /* HomeInjector.swift */; };
+		E6BF21BC2ACE4AD40002C179 /* GetMealsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BF21BB2ACE4AD40002C179 /* GetMealsUseCase.swift */; };
+		E6BF21BF2ACE4AF10002C179 /* MealsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BF21BE2ACE4AF10002C179 /* MealsModels.swift */; };
+		E6BF21C22ACE4B100002C179 /* MealsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BF21C12ACE4B100002C179 /* MealsRepository.swift */; };
+		E6BF21C42ACE4B260002C179 /* MealsRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BF21C32ACE4B260002C179 /* MealsRemoteDataSource.swift */; };
 		E6F6AD302ACE3F0800F40D4F /* FetchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F6AD2F2ACE3F0800F40D4F /* FetchApp.swift */; };
 		E6F6AD322ACE3F0800F40D4F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F6AD312ACE3F0800F40D4F /* HomeView.swift */; };
 		E6F6AD342ACE3F0A00F40D4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6F6AD332ACE3F0A00F40D4F /* Assets.xcassets */; };
@@ -39,6 +44,11 @@
 		E6BF21AE2ACE48850002C179 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		E6BF21AF2ACE489D0002C179 /* BuildConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildConfig.swift; sourceTree = "<group>"; };
 		E6BF21B22ACE48C00002C179 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		E6BF21B72ACE4A910002C179 /* HomeInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInjector.swift; sourceTree = "<group>"; };
+		E6BF21BB2ACE4AD40002C179 /* GetMealsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMealsUseCase.swift; sourceTree = "<group>"; };
+		E6BF21BE2ACE4AF10002C179 /* MealsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsModels.swift; sourceTree = "<group>"; };
+		E6BF21C12ACE4B100002C179 /* MealsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsRepository.swift; sourceTree = "<group>"; };
+		E6BF21C32ACE4B260002C179 /* MealsRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsRemoteDataSource.swift; sourceTree = "<group>"; };
 		E6F6AD2C2ACE3F0800F40D4F /* Fetch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fetch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6F6AD2F2ACE3F0800F40D4F /* FetchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchApp.swift; sourceTree = "<group>"; };
 		E6F6AD312ACE3F0800F40D4F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -113,6 +123,9 @@
 		E6BF21B42ACE49FB0002C179 /* home */ = {
 			isa = PBXGroup;
 			children = (
+				E6BF21BA2ACE4AAD0002C179 /* domain */,
+				E6BF21B92ACE4AA50002C179 /* data */,
+				E6BF21B62ACE4A7B0002C179 /* di */,
 				E6BF21B52ACE4A040002C179 /* ui */,
 			);
 			path = home;
@@ -124,6 +137,48 @@
 				E6F6AD312ACE3F0800F40D4F /* HomeView.swift */,
 			);
 			path = ui;
+			sourceTree = "<group>";
+		};
+		E6BF21B62ACE4A7B0002C179 /* di */ = {
+			isa = PBXGroup;
+			children = (
+				E6BF21B72ACE4A910002C179 /* HomeInjector.swift */,
+			);
+			path = di;
+			sourceTree = "<group>";
+		};
+		E6BF21B92ACE4AA50002C179 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				E6BF21C02ACE4B000002C179 /* remote */,
+				E6BF21C12ACE4B100002C179 /* MealsRepository.swift */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		E6BF21BA2ACE4AAD0002C179 /* domain */ = {
+			isa = PBXGroup;
+			children = (
+				E6BF21BD2ACE4AD90002C179 /* model */,
+				E6BF21BB2ACE4AD40002C179 /* GetMealsUseCase.swift */,
+			);
+			path = domain;
+			sourceTree = "<group>";
+		};
+		E6BF21BD2ACE4AD90002C179 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				E6BF21BE2ACE4AF10002C179 /* MealsModels.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		E6BF21C02ACE4B000002C179 /* remote */ = {
+			isa = PBXGroup;
+			children = (
+				E6BF21C32ACE4B260002C179 /* MealsRemoteDataSource.swift */,
+			);
+			path = remote;
 			sourceTree = "<group>";
 		};
 		E6F6AD232ACE3F0800F40D4F = {
@@ -316,9 +371,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6BF21B32ACE48C00002C179 /* String+Extension.swift in Sources */,
+				E6BF21BC2ACE4AD40002C179 /* GetMealsUseCase.swift in Sources */,
+				E6BF21C22ACE4B100002C179 /* MealsRepository.swift in Sources */,
+				E6BF21BF2ACE4AF10002C179 /* MealsModels.swift in Sources */,
 				E6BF21B02ACE489D0002C179 /* BuildConfig.swift in Sources */,
+				E6BF21B82ACE4A910002C179 /* HomeInjector.swift in Sources */,
 				E6F6AD322ACE3F0800F40D4F /* HomeView.swift in Sources */,
 				E6F6AD302ACE3F0800F40D4F /* FetchApp.swift in Sources */,
+				E6BF21C42ACE4B260002C179 /* MealsRemoteDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

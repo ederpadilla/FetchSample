@@ -72,6 +72,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E6BF21AB2ACE482A0002C179 /* features */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = features;
+			sourceTree = "<group>";
+		};
+		E6BF21AC2ACE48310002C179 /* foundation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = foundation;
+			sourceTree = "<group>";
+		};
+		E6BF21AD2ACE48380002C179 /* buildconfig */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = buildconfig;
+			sourceTree = "<group>";
+		};
 		E6F6AD232ACE3F0800F40D4F = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +116,9 @@
 		E6F6AD2E2ACE3F0800F40D4F /* Fetch */ = {
 			isa = PBXGroup;
 			children = (
+				E6BF21AB2ACE482A0002C179 /* features */,
+				E6BF21AC2ACE48310002C179 /* foundation */,
+				E6BF21AD2ACE48380002C179 /* buildconfig */,
 				E6F6AD592ACE3F2900F40D4F /* Info.plist */,
 				E6F6AD2F2ACE3F0800F40D4F /* FetchApp.swift */,
 				E6F6AD312ACE3F0800F40D4F /* ContentView.swift */,

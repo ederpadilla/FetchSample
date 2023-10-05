@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+struct MealItem {
+    let id: String
+    let name: String
+    let imageThumbnail: String
+}

@@ -13,12 +13,7 @@ struct HomeView: View {
     
     var body: some View {
         ZStack {
-            VStack {
-                Image(systemName: "globe")
-                    .imageScale(.large)
-                    .foregroundStyle(.tint)
-                Text("Hello, world!")
-            }.padding()
+            MealsCollectionView()
             
             if viewModel.homeUi.isLoading {
                 ProgressView()

@@ -39,7 +39,7 @@ class HomeViewModel: ObservableObject {
         print("Mensaje: \(homeUi.meals)")
     }
     
-    private func handleGetMealsError(_ error: Error) { // TODO: handle error ui
+    private func handleGetMealsError(_ error: Error) { // TODO: show message for error ui
         print("Error: \(error)")
         homeUi.isLoading = false
         switch error {

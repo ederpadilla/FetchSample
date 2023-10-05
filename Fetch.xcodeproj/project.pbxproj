@@ -18,6 +18,7 @@
 		E6BF21C92ACE4DAD0002C179 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BF21C82ACE4DAD0002C179 /* Array+Extension.swift */; };
 		E6BF21CB2ACE4E4D0002C179 /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BF21CA2ACE4E4D0002C179 /* URL+Extension.swift */; };
 		E6BF21CE2ACE4EC30002C179 /* NetworkClientBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BF21CD2ACE4EC30002C179 /* NetworkClientBuilder.swift */; };
+		E6BF21D12ACE57C20002C179 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BF21D02ACE57C20002C179 /* HomeViewModel.swift */; };
 		E6F6AD302ACE3F0800F40D4F /* FetchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F6AD2F2ACE3F0800F40D4F /* FetchApp.swift */; };
 		E6F6AD322ACE3F0800F40D4F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F6AD312ACE3F0800F40D4F /* HomeView.swift */; };
 		E6F6AD342ACE3F0A00F40D4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6F6AD332ACE3F0A00F40D4F /* Assets.xcassets */; };
@@ -57,6 +58,7 @@
 		E6BF21C82ACE4DAD0002C179 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		E6BF21CA2ACE4E4D0002C179 /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
 		E6BF21CD2ACE4EC30002C179 /* NetworkClientBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClientBuilder.swift; sourceTree = "<group>"; };
+		E6BF21D02ACE57C20002C179 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		E6F6AD2C2ACE3F0800F40D4F /* Fetch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fetch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6F6AD2F2ACE3F0800F40D4F /* FetchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchApp.swift; sourceTree = "<group>"; };
 		E6F6AD312ACE3F0800F40D4F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				E6F6AD312ACE3F0800F40D4F /* HomeView.swift */,
+				E6BF21D02ACE57C20002C179 /* HomeViewModel.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -415,6 +418,7 @@
 				E6BF21B02ACE489D0002C179 /* BuildConfig.swift in Sources */,
 				E6BF21B82ACE4A910002C179 /* HomeInjector.swift in Sources */,
 				E6F6AD322ACE3F0800F40D4F /* HomeView.swift in Sources */,
+				E6BF21D12ACE57C20002C179 /* HomeViewModel.swift in Sources */,
 				E6BF21CE2ACE4EC30002C179 /* NetworkClientBuilder.swift in Sources */,
 				E6F6AD302ACE3F0800F40D4F /* FetchApp.swift in Sources */,
 				E6BF21C72ACE4BFD0002C179 /* MealsRemoteModels.swift in Sources */,

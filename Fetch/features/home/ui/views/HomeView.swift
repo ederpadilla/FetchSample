@@ -13,6 +13,7 @@ struct HomeView: View {
     
     var body: some View {
         ZStack {
+            
             MealsCollectionView()
             
             if viewModel.homeUi.isLoading {

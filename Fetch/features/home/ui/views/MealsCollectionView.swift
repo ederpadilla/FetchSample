@@ -19,11 +19,9 @@ struct MealsCollectionView: View {
                                          spacing: .point16)],
                       spacing: .point46) {
                 ForEach(items, id: \.self) { item in
-                    Text("Item \(item)")
-                        .frame(maxWidth: .infinity, minHeight: .point100)
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                        .cornerRadius(.point8)
+                    
+                    MealView(item: item.description)
+                    
                 }
             }.padding(.point16)
         }

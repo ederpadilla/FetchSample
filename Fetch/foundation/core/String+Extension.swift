@@ -9,6 +9,8 @@ import Foundation
 
 extension String {
     
+    static let empty = ""
+    
     func trim() -> String {
         trimmingCharacters(in: NSCharacterSet.whitespaces)
     }
@@ -21,6 +23,6 @@ extension String {
 extension Optional where Wrapped == String {
     
     func orDefaultString() -> String {
-        return self ?? ""
+        return self ?? .empty
     }
 }

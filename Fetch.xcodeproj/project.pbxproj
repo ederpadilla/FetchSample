@@ -16,6 +16,7 @@
 		E6BF21C42ACE4B260002C179 /* MealsRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BF21C32ACE4B260002C179 /* MealsRemoteDataSource.swift */; };
 		E6BF21C72ACE4BFD0002C179 /* MealsRemoteModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BF21C62ACE4BFD0002C179 /* MealsRemoteModels.swift */; };
 		E6BF21C92ACE4DAD0002C179 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BF21C82ACE4DAD0002C179 /* Array+Extension.swift */; };
+		E6BF21CB2ACE4E4D0002C179 /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BF21CA2ACE4E4D0002C179 /* URL+Extension.swift */; };
 		E6F6AD302ACE3F0800F40D4F /* FetchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F6AD2F2ACE3F0800F40D4F /* FetchApp.swift */; };
 		E6F6AD322ACE3F0800F40D4F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F6AD312ACE3F0800F40D4F /* HomeView.swift */; };
 		E6F6AD342ACE3F0A00F40D4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6F6AD332ACE3F0A00F40D4F /* Assets.xcassets */; };
@@ -53,6 +54,7 @@
 		E6BF21C32ACE4B260002C179 /* MealsRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsRemoteDataSource.swift; sourceTree = "<group>"; };
 		E6BF21C62ACE4BFD0002C179 /* MealsRemoteModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsRemoteModels.swift; sourceTree = "<group>"; };
 		E6BF21C82ACE4DAD0002C179 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
+		E6BF21CA2ACE4E4D0002C179 /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
 		E6F6AD2C2ACE3F0800F40D4F /* Fetch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fetch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6F6AD2F2ACE3F0800F40D4F /* FetchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchApp.swift; sourceTree = "<group>"; };
 		E6F6AD312ACE3F0800F40D4F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 			children = (
 				E6BF21B22ACE48C00002C179 /* String+Extension.swift */,
 				E6BF21C82ACE4DAD0002C179 /* Array+Extension.swift */,
+				E6BF21CA2ACE4E4D0002C179 /* URL+Extension.swift */,
 			);
 			path = core;
 			sourceTree = "<group>";
@@ -389,6 +392,7 @@
 				E6BF21C22ACE4B100002C179 /* MealsRepository.swift in Sources */,
 				E6BF21C92ACE4DAD0002C179 /* Array+Extension.swift in Sources */,
 				E6BF21BF2ACE4AF10002C179 /* MealsModels.swift in Sources */,
+				E6BF21CB2ACE4E4D0002C179 /* URL+Extension.swift in Sources */,
 				E6BF21B02ACE489D0002C179 /* BuildConfig.swift in Sources */,
 				E6BF21B82ACE4A910002C179 /* HomeInjector.swift in Sources */,
 				E6F6AD322ACE3F0800F40D4F /* HomeView.swift in Sources */,

@@ -9,27 +9,35 @@ import SwiftUI
 
 struct MealView: View {
     
-    let item: String
+    @Binding var mealItemUi: MealItemUi
     
     var body: some View {
-        ZStack {
-            
-            CircularImageView()
-                .frame(width: 100, height: 100)
-                .offset(y: 100)
-            
-            Text("Item \(item)")
-                .frame(maxWidth: .infinity, minHeight: .point100)
-                .foregroundColor(.white)
+        VStack {
+            ZStack {
+                Text(mealItemUi.name)
+                    .frame(maxWidth: .infinity,
+                           minHeight: .point100)
+                    .lineLimit(.two)
+                    .multilineTextAlignment(.center)
+                    .bold()
+                    .foregroundColor(.white)
+                    .background(.salmon)
+                    .cornerRadius(.point8)
+                    .offset(y: .point120)
                 
-                .background(Color.blue)
-                .cornerRadius(.point8)
-            
-            
+                CircularImageView()
+                    .frame(maxWidth: .infinity,
+                           minHeight: .point35)
+            }
         }
     }
 }
 
 #Preview {
-    MealView(item: .empty)
+    @State var mealView = MealItemUi(id: "123",
+                                     name: "Bakewell tart",
+                                     image: "https://www.themealdb.com/images/media/meals/wyrqqq1468233628.jpg",
+                                     shouldDisplayImage: true)
+    
+    return MealView(mealItemUi: $mealView)
 }

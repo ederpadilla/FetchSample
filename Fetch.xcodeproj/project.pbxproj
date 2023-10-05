@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		E603BD252ACF69B000E773E8 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = E603BD242ACF69B000E773E8 /* Localizable.xcstrings */; };
+		E603BD272ACF6E9000E773E8 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E603BD262ACF6E9000E773E8 /* Color+Extension.swift */; };
+		E603BD292ACF74A600E773E8 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E603BD282ACF74A600E773E8 /* Int+Extension.swift */; };
 		E640CA0E2ACF4F9B004C5307 /* CircularImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E640CA0D2ACF4F9B004C5307 /* CircularImageView.swift */; };
 		E696E7B42ACF297600D22038 /* MealsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E696E7B32ACF297600D22038 /* MealsCollectionView.swift */; };
 		E696E7B82ACF2AEC00D22038 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = E696E7B72ACF2AEC00D22038 /* SDWebImageSwiftUI */; };
@@ -54,6 +56,8 @@
 
 /* Begin PBXFileReference section */
 		E603BD242ACF69B000E773E8 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		E603BD262ACF6E9000E773E8 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		E603BD282ACF74A600E773E8 /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
 		E640CA0D2ACF4F9B004C5307 /* CircularImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularImageView.swift; sourceTree = "<group>"; };
 		E696E7B32ACF297600D22038 /* MealsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsCollectionView.swift; sourceTree = "<group>"; };
 		E696E7B92ACF2D0200D22038 /* CGFloat+Spacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Spacing.swift"; sourceTree = "<group>"; };
@@ -115,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				E640CA0D2ACF4F9B004C5307 /* CircularImageView.swift */,
+				E603BD262ACF6E9000E773E8 /* Color+Extension.swift */,
 			);
 			path = styling;
 			sourceTree = "<group>";
@@ -153,6 +158,7 @@
 				E6BF21C82ACE4DAD0002C179 /* Array+Extension.swift */,
 				E6BF21CA2ACE4E4D0002C179 /* URL+Extension.swift */,
 				E696E7B92ACF2D0200D22038 /* CGFloat+Spacing.swift */,
+				E603BD282ACF74A600E773E8 /* Int+Extension.swift */,
 				E603BD242ACF69B000E773E8 /* Localizable.xcstrings */,
 			);
 			path = core;
@@ -463,6 +469,7 @@
 				E6BF21B32ACE48C00002C179 /* String+Extension.swift in Sources */,
 				E6BF21BC2ACE4AD40002C179 /* GetMealsUseCase.swift in Sources */,
 				E6BF21C22ACE4B100002C179 /* MealsRepository.swift in Sources */,
+				E603BD292ACF74A600E773E8 /* Int+Extension.swift in Sources */,
 				E6BF21C92ACE4DAD0002C179 /* Array+Extension.swift in Sources */,
 				E6BF21BF2ACE4AF10002C179 /* MealsModels.swift in Sources */,
 				E696E7BC2ACF2E7F00D22038 /* MealView.swift in Sources */,
@@ -471,6 +478,7 @@
 				E696E7BA2ACF2D0200D22038 /* CGFloat+Spacing.swift in Sources */,
 				E6BF21B02ACE489D0002C179 /* BuildConfig.swift in Sources */,
 				E6BF21B82ACE4A910002C179 /* HomeInjector.swift in Sources */,
+				E603BD272ACF6E9000E773E8 /* Color+Extension.swift in Sources */,
 				E6F6AD322ACE3F0800F40D4F /* HomeView.swift in Sources */,
 				E640CA0E2ACF4F9B004C5307 /* CircularImageView.swift in Sources */,
 				E6BF21D12ACE57C20002C179 /* HomeViewModel.swift in Sources */,

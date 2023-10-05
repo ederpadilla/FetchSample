@@ -14,7 +14,7 @@ struct CircularImageView: View {
             .aspectRatio(contentMode: .fill)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .clipShape(Circle())
-            .overlay(Circle().stroke(Color.white, lineWidth: .point2))
+            .overlay(Circle().stroke(Color.gray, lineWidth: .point4))
     }
 }
 

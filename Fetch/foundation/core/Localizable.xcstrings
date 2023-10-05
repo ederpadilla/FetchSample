@@ -1,9 +1,6 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "Item %@" : {
-
-    },
     "Meals Title" : {
       "extractionState" : "manual",
       "localizations" : {

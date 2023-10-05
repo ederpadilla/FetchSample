@@ -9,12 +9,12 @@ import Foundation
 
 struct HomeUi {
     var isLoading: Bool = true
-    var meals: [MealUi] = []
+    var mealsItemsUi: [MealItemUi] = []
     var isShowingDetail: Bool = false
     var showEmptyMealsMessage: Bool = false
 }
 
-struct MealUi: Identifiable {
+struct MealItemUi: Identifiable {
     let id: String
     let name: String
     let image: String

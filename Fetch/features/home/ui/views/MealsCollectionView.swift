@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MealsCollectionView: View {
     
-    let items = Array(1...20)
+    @Binding var mealsItemUi: [MealItemUi]
     
     var body: some View {
         ScrollView {
@@ -18,16 +18,16 @@ struct MealsCollectionView: View {
                                 GridItem(.flexible(),
                                          spacing: .point16)],
                       spacing: .point46) {
-                ForEach(items, id: \.self) { item in
+                
+                ForEach($mealsItemUi) { mealItemUi in
                     
-                    MealView(item: item.description)
+                    MealView(mealItemUi: mealItemUi)
+                        .padding(.bottom, .point80)
                     
                 }
-            }.padding(.point16)
-        }.navigationTitle(String(localized: "Meals Title"))
+            }
+                      .padding(.point16)
+        }
+        .navigationTitle(String(localized: "Meals Title"))
     }
-}
-
-#Preview {
-    MealsCollectionView()
 }

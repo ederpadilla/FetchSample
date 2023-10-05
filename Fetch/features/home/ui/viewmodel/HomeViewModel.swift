@@ -33,10 +33,10 @@ class HomeViewModel: ObservableObject {
     }
     
     private func handleGetMealsSuccess(_ meals: [MealItem]) {
-        homeUi.meals = meals.asMealsUi()
-        homeUi.showEmptyMealsMessage = homeUi.meals.isNotEmpty()
+        homeUi.mealsItemsUi = meals.asMealsItemsUi()
+        homeUi.showEmptyMealsMessage = homeUi.mealsItemsUi.isNotEmpty()
         homeUi.isLoading = false
-        print("Mensaje: \(homeUi.meals)")
+        print("Mensaje: \(homeUi.mealsItemsUi)")
     }
     
     private func handleGetMealsError(_ error: Error) { // TODO: show message for error ui

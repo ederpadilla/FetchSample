@@ -16,14 +16,14 @@ struct HomeView: View {
             
             NavigationView {
                 
-                MealsCollectionView()
+                MealsCollectionView(mealsItemUi: $viewModel.homeUi.mealsItemsUi)
                 
             }
             
             if viewModel.homeUi.isLoading {
                 ProgressView()
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .background(Color(UIColor.systemBackground))
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .background(Color(UIColor.systemBackground))
             }
         }
         .task {

@@ -15,20 +15,20 @@ struct MealItem {
 
 extension Array where Element == MealItem {
     
-    func asMealsUi() -> [MealUi] {
+    func asMealsItemsUi() -> [MealItemUi] {
         compactMap {
             guard $0.id.isNotEmpty() else { return nil }
-            return $0.asMealUi()
+            return $0.asMealItemUi()
         }
     }
 }
 
 extension MealItem {
     
-    func asMealUi() -> MealUi {
-        MealUi(id: id,
-               name: name,
-               image: imageThumbnail,
-               shouldDisplayImage: imageThumbnail.isNotEmpty())
+    func asMealItemUi() -> MealItemUi {
+        MealItemUi(id: id,
+                   name: name,
+                   image: imageThumbnail,
+                   shouldDisplayImage: imageThumbnail.isNotEmpty())
     }
 }

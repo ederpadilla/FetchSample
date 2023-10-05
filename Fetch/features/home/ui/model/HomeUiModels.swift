@@ -18,5 +18,11 @@ struct MealItemUi: Identifiable {
     let id: String
     let name: String
     let image: String
-    let shouldDisplayImage: Bool
+}
+
+extension MealItemUi {
+    
+    func canBeDisplayed() -> Bool {
+        id.isNotEmpty() || name.isNotEmpty() || image.isNotEmpty()
+    }
 }

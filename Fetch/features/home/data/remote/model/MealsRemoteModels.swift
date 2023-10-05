@@ -14,7 +14,7 @@ struct MealsRemoteResponse: Decodable {
 extension MealsRemoteResponse {
     
     func asMealItems() -> [MealItem] {
-        meals?.compactMap { $0.asMealItem() }.sorted { $0.name < $1.name } ?? []
+        meals?.compactMap { $0.asMealItem() } ?? []
     }
 }
 

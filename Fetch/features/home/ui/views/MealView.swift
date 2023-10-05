@@ -13,19 +13,19 @@ struct MealView: View {
     
     var body: some View {
         VStack {
-            ZStack {
-                Text(mealItemUi.name)
-                    .frame(maxWidth: .infinity,
-                           minHeight: .point100)
-                    .lineLimit(.two)
-                    .multilineTextAlignment(.center)
-                    .bold()
-                    .foregroundColor(.white)
-                    .background(.salmon)
-                    .cornerRadius(.point8)
-                    .offset(y: .point120)
+            if mealItemUi.canBeDisplayed() {
                 
-                if mealItemUi.shouldDisplayImage {
+                ZStack {
+                    Text(mealItemUi.name)
+                        .frame(maxWidth: .infinity,
+                               minHeight: .point100)
+                        .lineLimit(.two)
+                        .multilineTextAlignment(.center)
+                        .bold()
+                        .foregroundColor(.white)
+                        .background(.salmon)
+                        .cornerRadius(.point8)
+                        .offset(y: .point120)
                     
                     CircularImageView(imageUrl: mealItemUi.image)
                         .frame(maxWidth: .infinity,
@@ -39,8 +39,7 @@ struct MealView: View {
 #Preview {
     @State var mealView = MealItemUi(id: "123",
                                      name: "Bakewell tart",
-                                     image: "https://www.themealdb.com/images/media/meals/wyrqqq1468233628.jpg",
-                                     shouldDisplayImage: true)
+                                     image: "https://www.themealdb.com/images/media/meals/wyrqqq1468233628.jpg")
     
     return MealView(mealItemUi: $mealView)
 }

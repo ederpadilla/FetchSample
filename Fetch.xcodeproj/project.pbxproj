@@ -145,7 +145,7 @@
 		E6BF21B52ACE4A040002C179 /* ui */ = {
 			isa = PBXGroup;
 			children = (
-				E6F6AD312ACE3F0800F40D4F /* HomeView.swift */,
+				E6BF21CF2ACE55C30002C179 /* views */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -207,6 +207,14 @@
 				E6BF21CD2ACE4EC30002C179 /* NetworkClientBuilder.swift */,
 			);
 			path = network;
+			sourceTree = "<group>";
+		};
+		E6BF21CF2ACE55C30002C179 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				E6F6AD312ACE3F0800F40D4F /* HomeView.swift */,
+			);
+			path = views;
 			sourceTree = "<group>";
 		};
 		E6F6AD232ACE3F0800F40D4F = {

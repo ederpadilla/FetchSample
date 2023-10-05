@@ -6,3 +6,16 @@
 //
 
 import Foundation
+
+class GetMealsUseCase {
+    
+    private let mealsRepository: MealsRepository
+    
+    init(mealsRepository: MealsRepository) {
+        self.mealsRepository = mealsRepository
+    }
+    
+    func getDessertMeals(completion: @escaping (Result<[MealItem], Error>) -> Void) {
+        mealsRepository.getDessertMeals(completion: completion)
+    }
+}

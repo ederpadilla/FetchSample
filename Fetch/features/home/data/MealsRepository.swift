@@ -6,3 +6,16 @@
 //
 
 import Foundation
+
+class MealsRepository {
+    
+    private let mealsRemote: MealsRemote
+    
+    init(mealsRemote: MealsRemote) {
+        self.mealsRemote = mealsRemote
+    }
+    
+    func getDessertMeals(completion: @escaping (Result<[MealItem], Error>) -> Void) {
+        mealsRemote.fetchMeals(completion: completion)
+    }
+}

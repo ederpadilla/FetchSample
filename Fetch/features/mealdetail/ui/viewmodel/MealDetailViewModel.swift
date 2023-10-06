@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+class MealDetailViewModel: ObservableObject {
+    
+    private var getMealDetailUseCase: GetMealDetailUseCase
+    
+    init(getMealDetailUseCase: GetMealDetailUseCase) {
+        self.getMealDetailUseCase = getMealDetailUseCase
+    }
+}

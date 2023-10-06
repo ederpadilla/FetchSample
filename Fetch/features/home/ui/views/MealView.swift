@@ -13,24 +13,23 @@ struct MealView: View {
     
     var body: some View {
         VStack {
-            if mealItemUi.canBeDisplayed() {
+            
+            ZStack {
                 
-                ZStack {
-                    Text(mealItemUi.name)
-                        .frame(maxWidth: .infinity,
-                               minHeight: .point100)
-                        .lineLimit(.two)
-                        .multilineTextAlignment(.center)
-                        .bold()
-                        .foregroundColor(.white)
-                        .background(.salmon)
-                        .cornerRadius(.point8)
-                        .offset(y: .point120)
-                    
-                    CircularImageView(imageUrl: mealItemUi.image)
-                        .frame(maxWidth: .infinity,
-                               minHeight: .point35)
-                }
+                Text(mealItemUi.name)
+                    .frame(maxWidth: .infinity,
+                           minHeight: .point100)
+                    .lineLimit(.two)
+                    .multilineTextAlignment(.center)
+                    .bold()
+                    .foregroundColor(.white)
+                    .background(.salmon)
+                    .cornerRadius(.point8)
+                    .offset(y: .point120)
+                
+                CircularImageView(imageUrl: mealItemUi.image)
+                    .frame(maxWidth: .infinity,
+                           minHeight: .point35)
             }
         }
     }

@@ -17,7 +17,9 @@ extension Array where Element == MealItem {
     
     func asMealsItemsUi() -> [MealItemUi] {
         compactMap {
-            guard $0.id.isNotEmpty() else { return nil }
+            guard $0.id.isNotEmpty(),
+                  $0.name.isNotEmpty(),
+                  $0.imageThumbnail.isNotEmpty() else { return nil }
             return $0.asMealItemUi()
         }.sorted { $0.name < $1.name }
     }

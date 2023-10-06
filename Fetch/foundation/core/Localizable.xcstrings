@@ -1,6 +1,9 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "Hello, World!" : {
+
+    },
     "Meals Title" : {
       "extractionState" : "manual",
       "localizations" : {

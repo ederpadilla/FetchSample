@@ -1,6 +1,9 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "" : {
+
+    },
     "Hello, World!" : {
 
     },
@@ -14,9 +17,6 @@
           }
         }
       }
-    },
-    "Segunda Vista" : {
-
     }
   },
   "version" : "1.0"

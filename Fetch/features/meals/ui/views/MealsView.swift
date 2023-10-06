@@ -16,7 +16,7 @@ struct MealsView: View {
             
             NavigationView {
                 
-                MealsCollectionView(mealsItemUi: $viewModel.mealsUi.mealsItemsUi)
+                MealsCollectionView(mealsUi: $viewModel.mealsUi)
                 
             }
             

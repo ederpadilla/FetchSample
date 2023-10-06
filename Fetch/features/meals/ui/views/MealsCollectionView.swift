@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MealsCollectionView: View {
     
-    @Binding var mealsItemUi: [MealItemUi]
+    @Binding var mealsUi: MealsUi
     
     var body: some View {
         ScrollView {
@@ -19,12 +19,11 @@ struct MealsCollectionView: View {
                                          spacing: .point16)],
                       spacing: .point46) {
                 
-                ForEach($mealsItemUi) { mealItemUi in
+                ForEach(mealsUi.mealsItemsUi) { mealItemUi in
                     
                     NavigationLink(destination: MealDetailView()) {
                         MealView(mealItemUi: mealItemUi)
                             .padding(.bottom, .point80)
-                            
                     }
                     
                 }

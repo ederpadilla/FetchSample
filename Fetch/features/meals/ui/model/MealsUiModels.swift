@@ -10,7 +10,6 @@ import Foundation
 struct MealsUi {
     var isLoading: Bool = true
     var mealsItemsUi: [MealItemUi] = []
-    var isShowingDetail: Bool = false
     var showEmptyMealsMessage: Bool = false
 }
 

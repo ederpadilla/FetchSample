@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MealView: View {
     
-    @Binding var mealItemUi: MealItemUi
+    var mealItemUi: MealItemUi
     
     var body: some View {
         VStack {
@@ -23,7 +23,7 @@ struct MealView: View {
                     .multilineTextAlignment(.center)
                     .bold()
                     .foregroundColor(.white)
-                    .background(.salmon)
+                    .background(.accent)
                     .cornerRadius(.point8)
                     .offset(y: .point120)
                 
@@ -40,5 +40,5 @@ struct MealView: View {
                                      name: "Bakewell tart",
                                      image: "https://www.themealdb.com/images/media/meals/wyrqqq1468233628.jpg")
     
-    return MealView(mealItemUi: $mealView)
+    return MealView(mealItemUi: mealView)
 }

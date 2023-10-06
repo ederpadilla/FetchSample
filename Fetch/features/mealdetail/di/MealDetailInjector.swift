@@ -25,7 +25,7 @@ enum MealDetailInjector {
         MealDetailViewModel(getMealDetailUseCase: provideGetMealDetailUseCase())
     }
     
-    static func provideMealDetailView() -> MealDetailView {
-        MealDetailView(viewModel: provideMealDetailViewModel())
+    static func provideMealDetailView(mealId: String) -> MealDetailView {
+        MealDetailView(viewModel: provideMealDetailViewModel(), id: mealId)
     }
 }

@@ -21,7 +21,7 @@ struct MealsCollectionView: View {
                 
                 ForEach(mealsUi.mealsItemsUi) { mealItemUi in
                     
-                    NavigationLink(destination: MealDetailInjector.provideMealDetailView()) {
+                    NavigationLink(destination: MealDetailInjector.provideMealDetailView(mealId: mealItemUi.id)) {
                         MealView(mealItemUi: mealItemUi)
                             .padding(.bottom, .point80)
                     }

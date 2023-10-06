@@ -33,10 +33,12 @@ class MealDetailViewModel: ObservableObject {
     }
     
     private func handleGetMealDetailSuccess(_ mealDetail: MealDetail) {
+        print("meal detail \(mealDetail)")
         mealDetailUi.isLoading = false
     }
     
     private func handleGetMealDetailError(_ error: Error) { // TODO: show message for error ui
+        print("meal detail \(error)")
         mealDetailUi.isLoading = false
         switch error {
         case NetworkError.noInternetConnection:

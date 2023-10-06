@@ -21,8 +21,11 @@ struct MealsCollectionView: View {
                 
                 ForEach($mealsItemUi) { mealItemUi in
                     
-                    MealView(mealItemUi: mealItemUi)
-                        .padding(.bottom, .point80)
+                    NavigationLink(destination: MealDetailView()) {
+                        MealView(mealItemUi: mealItemUi)
+                            .padding(.bottom, .point80)
+                            
+                    }
                     
                 }
             }

@@ -13,6 +13,7 @@ struct CircularImageView: View {
     let imageUrl: String
     
     var body: some View {
+        
         AnimatedImage(url: URL(string: imageUrl))
             .transition(SDWebImageTransition.fade)
             .resizable()

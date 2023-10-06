@@ -1,5 +1,5 @@
 //
-//  HomeViewModel.swift
+//  MealsViewModel.swift
 //  Fetch
 //
 //  Created by Eder  Padilla on 04/10/23.
@@ -7,9 +7,9 @@
 
 import Foundation
 
-class HomeViewModel: ObservableObject {
+class MealsViewModel: ObservableObject {
     
-    @Published var homeUi = HomeUi()
+    @Published var mealsUi = MealsUi()
     private var getMealsUseCase: GetMealsUseCase
     
     init(getMealsUseCase: GetMealsUseCase) {
@@ -17,7 +17,7 @@ class HomeViewModel: ObservableObject {
     }
     
     func getMealsFromDesert() {
-        homeUi.isLoading = true
+        mealsUi.isLoading = true
         Task {
             do {
                 let meals = try await self.getMealsUseCase.getDessertMeals()
@@ -33,15 +33,15 @@ class HomeViewModel: ObservableObject {
     }
     
     private func handleGetMealsSuccess(_ meals: [MealItem]) {
-        homeUi.mealsItemsUi = meals.asMealsItemsUi()
-        homeUi.showEmptyMealsMessage = homeUi.mealsItemsUi.isNotEmpty()
-        homeUi.isLoading = false
-        print("Mensaje: \(homeUi.mealsItemsUi)")
+        mealsUi.mealsItemsUi = meals.asMealsItemsUi()
+        mealsUi.showEmptyMealsMessage = mealsUi.mealsItemsUi.isNotEmpty()
+        mealsUi.isLoading = false
+        print("Mensaje: \(mealsUi.mealsItemsUi)")
     }
     
     private func handleGetMealsError(_ error: Error) { // TODO: show message for error ui
         print("Error: \(error)")
-        homeUi.isLoading = false
+        mealsUi.isLoading = false
         switch error {
         case NetworkError.noInternetConnection:
             return

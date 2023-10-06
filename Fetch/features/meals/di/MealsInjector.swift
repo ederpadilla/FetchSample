@@ -1,5 +1,5 @@
 //
-//  HomeInjector.swift
+//  MealsInjector.swift
 //  Fetch
 //
 //  Created by Eder  Padilla on 04/10/23.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum HomeInjector {
+enum MealsInjector {
     
     private static func provideMealsRemoteDataSource() -> MealsRemoteDataSource {
         MealsRemoteDataSource()
@@ -21,11 +21,11 @@ enum HomeInjector {
         GetMealsUseCase(mealsRepository: provideMealsRepository())
     }
     
-    private static func provideHomeViewModel() -> HomeViewModel {
-        HomeViewModel(getMealsUseCase: provideGetMealsUseCase())
+    private static func provideMealsViewModel() -> MealsViewModel {
+        MealsViewModel(getMealsUseCase: provideGetMealsUseCase())
     }
     
-    static func provideHomeView() -> HomeView {
-        HomeView(viewModel: provideHomeViewModel())
+    static func provideMealsView() -> MealsView {
+        MealsView(viewModel: provideMealsViewModel())
     }
 }

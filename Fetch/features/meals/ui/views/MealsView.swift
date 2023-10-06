@@ -7,20 +7,20 @@
 
 import SwiftUI
 
-struct HomeView: View {
+struct MealsView: View {
     
-    @StateObject var viewModel: HomeViewModel
+    @StateObject var viewModel: MealsViewModel
     
     var body: some View {
         ZStack {
             
             NavigationView {
                 
-                MealsCollectionView(mealsItemUi: $viewModel.homeUi.mealsItemsUi)
+                MealsCollectionView(mealsItemUi: $viewModel.mealsUi.mealsItemsUi)
                 
             }
             
-            if viewModel.homeUi.isLoading {
+            if viewModel.mealsUi.isLoading {
                 ProgressView()
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .background(Color(UIColor.systemBackground))
@@ -33,5 +33,5 @@ struct HomeView: View {
 }
 
 #Preview {
-    HomeInjector.provideHomeView()
+    MealsInjector.provideMealsView()
 }

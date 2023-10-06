@@ -1,5 +1,5 @@
 //
-//  HomeUiModels.swift
+//  MealsUiModels.swift
 //  Fetch
 //
 //  Created by Eder  Padilla on 04/10/23.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct HomeUi {
+struct MealsUi {
     var isLoading: Bool = true
     var mealsItemsUi: [MealItemUi] = []
     var isShowingDetail: Bool = false

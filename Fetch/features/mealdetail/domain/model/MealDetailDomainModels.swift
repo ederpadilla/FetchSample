@@ -8,16 +8,16 @@
 import Foundation
 
 struct MealDetail {
-    let id: String
-    let name: String
-    let drinkAlternat: String
-    let category: String
-    let area: String
-    let instructions: String
-    let thumbnailUrl: String
-    let tags: String
-    let youtubeUrl: String
-    let ingredients: [String]
-    let measures: [String]
-    let source: String
+    var id: String = .empty
+    var name: String = .empty
+    var drinkAlternat: String = .empty
+    var category: String = .empty
+    var area: String = .empty
+    var instructions: String = .empty
+    var thumbnailUrl: String = .empty
+    var tags: String = .empty
+    var youtubeUrl: String = .empty
+    var ingredients: [String] = []
+    var measures: [String] = []
+    var source: String = .empty
 }

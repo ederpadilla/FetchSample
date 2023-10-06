@@ -14,18 +14,7 @@ struct MealDetailRemoteResponse: Decodable {
 extension MealDetailRemoteResponse {
     
     func asMealDetail() -> MealDetail {
-        MealDetail(id: <#T##String#>,
-                   name: <#T##String#>,
-                   drinkAlternat: <#T##String#>,
-                   category: <#T##String#>,
-                   area: <#T##String#>,
-                   instructions: <#T##String#>,
-                   thumbnailUrl: <#T##String#>,
-                   tags: <#T##String#>,
-                   youtubeUrl: <#T##String#>,
-                   ingredients: <#T##[String]#>,
-                   measures: <#T##[String]#>,
-                   source: <#T##String#>)
+        meals?.first?.asMealDetail() ?? MealDetail()
     }
 }
 
@@ -80,7 +69,68 @@ struct MealDetailItemRemoteResponse: Decodable {
     var strMeasure19: String? = nil
     var strMeasure20: String? = nil
     var strSource: String? = nil
-    var strImageSource: String? = nil
-    var strCreativeCommonsConfirmed: String? = nil
-    var dateModified: String? = nil
+}
+
+extension MealDetailItemRemoteResponse {
+    
+    func asMealDetail() -> MealDetail {
+        MealDetail(id: idMeal.orDefaultString(),
+                   name: strMeal.orDefaultString(),
+                   drinkAlternat: strDrinkAlternat.orDefaultString(),
+                   category: strCategory.orDefaultString(),
+                   area: strArea.orDefaultString(),
+                   instructions: strInstructions.orDefaultString(),
+                   thumbnailUrl: strMealThumb.orDefaultString(),
+                   tags: strTags.orDefaultString(),
+                   youtubeUrl: strYoutube.orDefaultString(),
+                   ingredients: createIngredients(),
+                   measures: createMeasures(),
+                   source: strSource.orDefaultString())
+    }
+    
+    private func createIngredients() -> [String] {
+        [strIngredient1.orDefaultString(),
+         strIngredient2.orDefaultString(),
+         strIngredient3.orDefaultString(),
+         strIngredient4.orDefaultString(),
+         strIngredient5.orDefaultString(),
+         strIngredient6.orDefaultString(),
+         strIngredient7.orDefaultString(),
+         strIngredient8.orDefaultString(),
+         strIngredient9.orDefaultString(),
+         strIngredient10.orDefaultString(),
+         strIngredient11.orDefaultString(),
+         strIngredient12.orDefaultString(),
+         strIngredient13.orDefaultString(),
+         strIngredient14.orDefaultString(),
+         strIngredient15.orDefaultString(),
+         strIngredient16.orDefaultString(),
+         strIngredient17.orDefaultString(),
+         strIngredient18.orDefaultString(),
+         strIngredient19.orDefaultString(),
+         strIngredient20.orDefaultString()]
+    }
+    
+    private func createMeasures() -> [String] {
+        [strMeasure1.orDefaultString(),
+         strMeasure2.orDefaultString(),
+         strMeasure3.orDefaultString(),
+         strMeasure4.orDefaultString(),
+         strMeasure5.orDefaultString(),
+         strMeasure6.orDefaultString(),
+         strMeasure7.orDefaultString(),
+         strMeasure8.orDefaultString(),
+         strMeasure9.orDefaultString(),
+         strMeasure10.orDefaultString(),
+         strMeasure11.orDefaultString(),
+         strMeasure12.orDefaultString(),
+         strMeasure13.orDefaultString(),
+         strMeasure14.orDefaultString(),
+         strMeasure15.orDefaultString(),
+         strMeasure16.orDefaultString(),
+         strMeasure17.orDefaultString(),
+         strMeasure18.orDefaultString(),
+         strMeasure19.orDefaultString(),
+         strMeasure20.orDefaultString()]
+    }
 }

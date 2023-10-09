@@ -33,7 +33,7 @@ class MealDetailViewModel: ObservableObject {
     }
     
     private func handleGetMealDetailSuccess(_ mealDetail: MealDetail) {
-        print("meal detail \(mealDetail)")
+        mealDetailUi.mealDetailItemUi = mealDetail.asMealDetailItemUi()
         mealDetailUi.isLoading = false
     }
     

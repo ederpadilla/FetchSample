@@ -11,7 +11,6 @@ import SDWebImageSwiftUI
 struct CircularImageView: View {
     
     let imageUrl: String
-    var strokeColor: Color = .gray
     
     var body: some View {
         
@@ -22,7 +21,6 @@ struct CircularImageView: View {
             .aspectRatio(contentMode: .fit)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .clipShape(Circle())
-            .overlay(Circle().stroke(strokeColor, lineWidth: .point4))
     }
 }
 

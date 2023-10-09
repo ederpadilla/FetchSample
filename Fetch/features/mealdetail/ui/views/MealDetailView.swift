@@ -21,10 +21,11 @@ struct MealDetailView: View {
                 
                 MealImageDetailView(mealDetailItemUi: viewModel.mealDetailUi.mealDetailItemUi)
                     .padding(.horizontal)
+                    .zIndex(1)
                 
                 IntructionsView(mealDetailItemUi: viewModel.mealDetailUi.mealDetailItemUi)
                 
-            }
+            }.zIndex(0)
             
             .onAppear {
                 viewModel.getMetalDetail(by: id)

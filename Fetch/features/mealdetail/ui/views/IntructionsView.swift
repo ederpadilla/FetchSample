@@ -25,7 +25,10 @@ struct IntructionsView: View {
             Spacer()
         }
         .padding(.horizontal)
-        .background(Color.white)
+        .background(
+            Color.white
+                .clipShape(RoundTopsShape())
+                .padding(.top, -.point100)
+        )
     }
 }
-

@@ -30,7 +30,7 @@ struct MealImageDetailView: View {
             
             Spacer()
             
-            CircularImageView(imageUrl: mealDetailItemUi.image, strokeColor: .accentColor)
+            CircularImageView(imageUrl: mealDetailItemUi.image)
                 .frame(width: .point200,
                        height: .point200)
                 .offset(y: isAnimating ? .point0 : -.point35)

@@ -30,7 +30,7 @@ extension MealDetail {
                          category: category,
                          area: area,
                          instructions: instructions,
-                         thumbnailUrl: thumbnailUrl,
+                         image: thumbnailUrl,
                          tags: tags,
                          youtubeUrl: youtubeUrl,
                          ingredients: createIngredients(),

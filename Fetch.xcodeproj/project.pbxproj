@@ -10,6 +10,9 @@
 		E603BD252ACF69B000E773E8 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = E603BD242ACF69B000E773E8 /* Localizable.xcstrings */; };
 		E603BD272ACF6E9000E773E8 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E603BD262ACF6E9000E773E8 /* Color+Extension.swift */; };
 		E603BD292ACF74A600E773E8 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E603BD282ACF74A600E773E8 /* Int+Extension.swift */; };
+		E61BF7892AD460E20004E4A4 /* TimeInterval+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61BF7882AD460E20004E4A4 /* TimeInterval+Extension.swift */; };
+		E61BF78B2AD465DC0004E4A4 /* HeaderDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61BF78A2AD465DC0004E4A4 /* HeaderDetailView.swift */; };
+		E61BF78D2AD466110004E4A4 /* MealImageDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61BF78C2AD466110004E4A4 /* MealImageDetailView.swift */; };
 		E640CA0E2ACF4F9B004C5307 /* CircularImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E640CA0D2ACF4F9B004C5307 /* CircularImageView.swift */; };
 		E696E7B42ACF297600D22038 /* MealsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E696E7B32ACF297600D22038 /* MealsCollectionView.swift */; };
 		E696E7B82ACF2AEC00D22038 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = E696E7B72ACF2AEC00D22038 /* SDWebImageSwiftUI */; };
@@ -67,6 +70,9 @@
 		E603BD242ACF69B000E773E8 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		E603BD262ACF6E9000E773E8 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		E603BD282ACF74A600E773E8 /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
+		E61BF7882AD460E20004E4A4 /* TimeInterval+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Extension.swift"; sourceTree = "<group>"; };
+		E61BF78A2AD465DC0004E4A4 /* HeaderDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderDetailView.swift; sourceTree = "<group>"; };
+		E61BF78C2AD466110004E4A4 /* MealImageDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealImageDetailView.swift; sourceTree = "<group>"; };
 		E640CA0D2ACF4F9B004C5307 /* CircularImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularImageView.swift; sourceTree = "<group>"; };
 		E696E7B32ACF297600D22038 /* MealsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsCollectionView.swift; sourceTree = "<group>"; };
 		E696E7B92ACF2D0200D22038 /* CGFloat+Spacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Spacing.swift"; sourceTree = "<group>"; };
@@ -234,6 +240,8 @@
 			isa = PBXGroup;
 			children = (
 				E69ACC792ACF92F100988764 /* MealDetailView.swift */,
+				E61BF78A2AD465DC0004E4A4 /* HeaderDetailView.swift */,
+				E61BF78C2AD466110004E4A4 /* MealImageDetailView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -275,6 +283,7 @@
 				E696E7B92ACF2D0200D22038 /* CGFloat+Spacing.swift */,
 				E603BD282ACF74A600E773E8 /* Int+Extension.swift */,
 				E603BD242ACF69B000E773E8 /* Localizable.xcstrings */,
+				E61BF7882AD460E20004E4A4 /* TimeInterval+Extension.swift */,
 			);
 			path = core;
 			sourceTree = "<group>";
@@ -584,10 +593,12 @@
 				E69ACC6D2ACF91B000988764 /* MealDetailRemoteDataSource.swift in Sources */,
 				E6BF21B32ACE48C00002C179 /* String+Extension.swift in Sources */,
 				E6BF21BC2ACE4AD40002C179 /* GetMealsUseCase.swift in Sources */,
+				E61BF7892AD460E20004E4A4 /* TimeInterval+Extension.swift in Sources */,
 				E6BF21C22ACE4B100002C179 /* MealsRepository.swift in Sources */,
 				E603BD292ACF74A600E773E8 /* Int+Extension.swift in Sources */,
 				E69ACC692ACF916E00988764 /* MealDetailDomainModels.swift in Sources */,
 				E69ACC762ACF92B900988764 /* MealDetailUiModels.swift in Sources */,
+				E61BF78B2AD465DC0004E4A4 /* HeaderDetailView.swift in Sources */,
 				E6BF21C92ACE4DAD0002C179 /* Array+Extension.swift in Sources */,
 				E6BF21BF2ACE4AF10002C179 /* MealsDomainModels.swift in Sources */,
 				E696E7BC2ACF2E7F00D22038 /* MealView.swift in Sources */,
@@ -607,6 +618,7 @@
 				E6CB9BBF2AD0941E00095A9E /* MealDetailRepository.swift in Sources */,
 				E6BF21CE2ACE4EC30002C179 /* NetworkClientBuilder.swift in Sources */,
 				E6F6AD302ACE3F0800F40D4F /* FetchApp.swift in Sources */,
+				E61BF78D2AD466110004E4A4 /* MealImageDetailView.swift in Sources */,
 				E696E7B42ACF297600D22038 /* MealsCollectionView.swift in Sources */,
 				E6BF21C72ACE4BFD0002C179 /* MealsRemoteModels.swift in Sources */,
 				E69ACC782ACF92D400988764 /* MealDetailViewModel.swift in Sources */,

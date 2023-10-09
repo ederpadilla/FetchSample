@@ -15,10 +15,18 @@ struct MealDetailView: View {
     
     var body: some View {
         ZStack {
-            
             VStack(alignment: .leading , spacing: .point5) {
-                Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+                
+                HeaderDetailView(mealDetailItemUi: viewModel.mealDetailUi.mealDetailItemUi)
+                
+                MealImageDetailView(mealDetailItemUi: viewModel.mealDetailUi.mealDetailItemUi)
+                    .padding(.horizontal)
+                
+                Spacer()
+                
             }
+            .padding()
+            
             .onAppear {
                 viewModel.getMetalDetail(by: id)
             }
@@ -28,6 +36,6 @@ struct MealDetailView: View {
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .background(Color(UIColor.systemBackground))
             }
-        }
+        }.background(Color.accentColor)
     }
 }

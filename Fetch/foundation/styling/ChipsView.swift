@@ -30,7 +30,7 @@ struct ChipView: View {
     var body: some View {
         Text(label)
             .padding(EdgeInsets(top: .point4, leading: .point16, bottom: .point2, trailing: .point16))
-            .background(Color.accentColor)
+            .background(Color.salmon)
             .foregroundColor(.white)
             .cornerRadius(.point16)
     }

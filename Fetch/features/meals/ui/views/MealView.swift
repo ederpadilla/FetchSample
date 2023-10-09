@@ -23,7 +23,7 @@ struct MealView: View {
                     .multilineTextAlignment(.center)
                     .bold()
                     .foregroundColor(.white)
-                    .background(.accent)
+                    .background(.salmon)
                     .cornerRadius(.point8)
                     .offset(y: .point120)
                 

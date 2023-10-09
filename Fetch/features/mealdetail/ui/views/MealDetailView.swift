@@ -12,10 +12,11 @@ struct MealDetailView: View {
     @StateObject var viewModel: MealDetailViewModel
     let id: String
     
-    
     var body: some View {
         ZStack {
             VStack(alignment: .leading , spacing: .point5) {
+                
+                
                 
                 HeaderDetailView(mealDetailItemUi: viewModel.mealDetailUi.mealDetailItemUi)
                     .padding(.horizontal)
@@ -27,16 +28,18 @@ struct MealDetailView: View {
                 IntructionsView(mealDetailItemUi: viewModel.mealDetailUi.mealDetailItemUi)
                 
             }.zIndex(.point0)
-            
-            .onAppear {
-                viewModel.getMetalDetail(by: id)
-            }
+                .onAppear {
+                    UINavigationBar.appearance().tintColor = .white
+                    viewModel.getMetalDetail(by: id)
+                }
             
             if viewModel.mealDetailUi.isLoading {
                 ProgressView()
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .background(Color(UIColor.systemBackground))
             }
-        }.background(Color.accentColor)
+        }
+        
+        .background(Color.salmon)
     }
 }

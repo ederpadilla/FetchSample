@@ -29,13 +29,13 @@ extension MealDetail {
                          drinkAlternat: drinkAlternat,
                          category: category,
                          area: area,
-                         instructions: instructions,
                          image: thumbnailUrl,
                          tags: tags,
                          youtubeUrl: youtubeUrl,
+                         source: source,
+                         instructions: instructions,
                          ingredients: createIngredients(),
-                         measures: createIngredients(),
-                         source: source)
+                         measures: createMeasures())
     }
     
     private func createIngredients() -> [String] {

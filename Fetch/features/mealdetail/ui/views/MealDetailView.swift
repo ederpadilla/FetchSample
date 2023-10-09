@@ -33,11 +33,10 @@ struct MealDetailView: View {
                     
                     Spacer()
                 }
-                .padding()
-                .background(Color(UIColor.systemBackground))
+                .padding(.horizontal)
+                .background(Color.white)
                 
             }
-            .padding()
             
             .onAppear {
                 viewModel.getMetalDetail(by: id)

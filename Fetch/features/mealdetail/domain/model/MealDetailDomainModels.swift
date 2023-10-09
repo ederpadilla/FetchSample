@@ -21,3 +21,34 @@ struct MealDetail {
     var measures: [String] = []
     var source: String = .empty
 }
+
+extension MealDetail {
+    
+    func asMealDetailItemUi() -> MealDetailItemUi {
+        MealDetailItemUi(name: name,
+                         drinkAlternat: drinkAlternat,
+                         category: category,
+                         area: area,
+                         instructions: instructions,
+                         thumbnailUrl: thumbnailUrl,
+                         tags: tags,
+                         youtubeUrl: youtubeUrl,
+                         ingredients: createIngredients(),
+                         measures: createIngredients(),
+                         source: source)
+    }
+    
+    private func createIngredients() -> [String] {
+        ingredients.compactMap {
+            guard $0.isNotEmpty() else { return nil }
+            return $0
+        }
+    }
+    
+    private func createMeasures() -> [String] {
+        measures.compactMap {
+            guard $0.isNotEmpty() else { return nil }
+            return $0
+        }
+    }
+}

@@ -12,6 +12,7 @@ extension CGFloat {
     static var point0: CGFloat { return 0 }
     static var point2: CGFloat { return 2 }
     static var point4: CGFloat { return 4 }
+    static var point5: CGFloat { return 5 }
     static var point8: CGFloat { return 8 }
     static var point16: CGFloat { return 16 }
     static var point35: CGFloat { return 35 }

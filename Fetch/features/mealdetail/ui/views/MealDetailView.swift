@@ -14,15 +14,20 @@ struct MealDetailView: View {
     
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            
+            VStack(alignment: .leading , spacing: .point5) {
+                Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+            }
             .onAppear {
                 viewModel.getMetalDetail(by: id)
             }
-        
-        if viewModel.mealDetailUi.isLoading {
-            ProgressView()
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .background(Color(UIColor.systemBackground))
+            
+            if viewModel.mealDetailUi.isLoading {
+                ProgressView()
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .background(Color(UIColor.systemBackground))
+            }
         }
     }
 }

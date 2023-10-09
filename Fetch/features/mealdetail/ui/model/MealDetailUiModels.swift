@@ -14,14 +14,11 @@ struct MealDetailUi {
 }
 
 struct MealDetailItemUi {
-    var name: String = .empty //
-    var drinkAlternat: String = .empty //
-    var category: String = .empty //
-    var area: String = .empty //
-    var image: String = .empty //
-    var tags: String = .empty
-    var youtubeUrl: String = .empty
-    var source: String = .empty
+    var name: String = .empty
+    var drinkAlternat: String = .empty
+    var category: String = .empty
+    var area: String = .empty
+    var image: String = .empty
     var instructions: String = .empty
     var ingredients: [String] = []
     var measures: [String] = []

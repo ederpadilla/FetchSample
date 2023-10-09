@@ -30,9 +30,6 @@ extension MealDetail {
                          category: category,
                          area: area,
                          image: thumbnailUrl,
-                         tags: tags,
-                         youtubeUrl: youtubeUrl,
-                         source: source,
                          instructions: instructions,
                          ingredients: createIngredients(),
                          measures: createMeasures())

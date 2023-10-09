@@ -15,16 +15,18 @@ struct IntructionsView: View {
         
         VStack(alignment: .center) {
             
+            ChipsView(labels: mealDetailItemUi.createIngredientsAndMeasures())
+            
             ScrollView(.vertical, showsIndicators: false) {
                 Text(mealDetailItemUi.instructions)
                     .font(.system(.body, design: .rounded))
                     .foregroundColor(Color(UIColor.systemGray))
                     .multilineTextAlignment(.leading)
-            }
+            }.padding(.horizontal)
             
             Spacer()
         }
-        .padding(.horizontal)
+        
         .background(
             Color.white
                 .clipShape(RoundTopsShape())

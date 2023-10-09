@@ -10,6 +10,7 @@ import Foundation
 extension String {
     
     static let empty = ""
+    static let whitespace = " "
     
     func trim() -> String {
         trimmingCharacters(in: NSCharacterSet.whitespaces)
@@ -17,6 +18,12 @@ extension String {
     
     func isNotEmpty() -> Bool {
         !trim().isEmpty
+    }
+    
+    func capitalizeFirstLetterOfEachWord() -> String {
+        let words = self.components(separatedBy: .whitespaces)
+        let capitalizedWords = words.map { $0.prefix(.one).uppercased() + $0.dropFirst() }
+        return capitalizedWords.joined(separator: .whitespace)
     }
 }
 

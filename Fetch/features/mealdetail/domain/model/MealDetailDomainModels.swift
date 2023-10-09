@@ -41,14 +41,14 @@ extension MealDetail {
     private func createIngredients() -> [String] {
         ingredients.compactMap {
             guard $0.isNotEmpty() else { return nil }
-            return $0
+            return $0.capitalizeFirstLetterOfEachWord()
         }
     }
     
     private func createMeasures() -> [String] {
         measures.compactMap {
             guard $0.isNotEmpty() else { return nil }
-            return $0
+            return $0.capitalizeFirstLetterOfEachWord()
         }
     }
 }

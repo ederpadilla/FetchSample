@@ -9,5 +9,6 @@ import Foundation
 
 extension Int {
     
+    static var one: Int { return 1 }
     static var two: Int { return 2 }
 }

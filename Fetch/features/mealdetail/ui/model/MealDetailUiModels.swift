@@ -26,3 +26,20 @@ struct MealDetailItemUi {
     var ingredients: [String] = []
     var measures: [String] = []
 }
+
+extension MealDetailItemUi {
+    
+    func createIngredientsAndMeasures() -> [String] {
+        guard ingredients.isNotEmpty() 
+                && measures.isNotEmpty()
+                && ingredients.count  == measures.count else { return [] }
+        var combinedArray = [String]()
+        
+        for (ingredient, measure) in zip(ingredients, measures) {
+            let combinedElement = "\(ingredient): \(measure)"
+            combinedArray.append(combinedElement)
+        }
+        
+        return combinedArray
+    }
+}

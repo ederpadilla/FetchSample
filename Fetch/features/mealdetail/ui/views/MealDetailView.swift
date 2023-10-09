@@ -18,14 +18,15 @@ struct MealDetailView: View {
             VStack(alignment: .leading , spacing: .point5) {
                 
                 HeaderDetailView(mealDetailItemUi: viewModel.mealDetailUi.mealDetailItemUi)
+                    .padding(.horizontal)
                 
                 MealImageDetailView(mealDetailItemUi: viewModel.mealDetailUi.mealDetailItemUi)
                     .padding(.horizontal)
-                    .zIndex(1)
+                    .zIndex(.point1)
                 
                 IntructionsView(mealDetailItemUi: viewModel.mealDetailUi.mealDetailItemUi)
                 
-            }.zIndex(0)
+            }.zIndex(.point0)
             
             .onAppear {
                 viewModel.getMetalDetail(by: id)

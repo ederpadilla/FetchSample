@@ -22,7 +22,19 @@ struct MealDetailView: View {
                 MealImageDetailView(mealDetailItemUi: viewModel.mealDetailUi.mealDetailItemUi)
                     .padding(.horizontal)
                 
-                Spacer()
+                VStack(alignment: .center) {
+                 
+                    ScrollView(.vertical, showsIndicators: false) {
+                        Text(viewModel.mealDetailUi.mealDetailItemUi.instructions)
+                            .font(.system(.body, design: .rounded))
+                            .foregroundColor(Color(UIColor.systemGray))
+                            .multilineTextAlignment(.leading)
+                    }
+                    
+                    Spacer()
+                }
+                .padding()
+                .background(Color(UIColor.systemBackground))
                 
             }
             .padding()

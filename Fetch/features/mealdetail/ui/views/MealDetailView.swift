@@ -16,8 +16,6 @@ struct MealDetailView: View {
         ZStack {
             VStack(alignment: .leading , spacing: .point5) {
                 
-                
-                
                 HeaderDetailView(mealDetailItemUi: viewModel.mealDetailUi.mealDetailItemUi)
                     .padding(.horizontal)
                 

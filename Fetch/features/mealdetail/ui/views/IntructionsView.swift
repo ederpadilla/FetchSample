@@ -22,7 +22,9 @@ struct IntructionsView: View {
                     .font(.system(.body, design: .rounded))
                     .foregroundColor(Color(UIColor.systemGray))
                     .multilineTextAlignment(.leading)
-            }.padding(.horizontal)
+            }
+            .padding(.horizontal)
+            .padding(.bottom, .point75)
             
             Spacer()
         }
@@ -32,5 +34,6 @@ struct IntructionsView: View {
                 .clipShape(RoundTopsShape())
                 .padding(.top, -.point100)
         )
+        .ignoresSafeArea()
     }
 }
